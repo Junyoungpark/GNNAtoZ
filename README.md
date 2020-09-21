@@ -1,1 +1,1 @@
-# GNNAtoZ
+# Graph Neural Network A-Z
