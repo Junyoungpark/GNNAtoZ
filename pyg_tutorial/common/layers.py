@@ -19,7 +19,7 @@ class InteractionNetworkLayer(MessagePassing):
 
     def forward(self, x, edge_index, edge_attr) -> Tuple[T, T]:
         updated_ef = self.edge_update(x, edge_index, edge_attr)
-        updated_nf = self.propagate(edge_index, x=x, edge_attr=edge_attr)
+        updated_nf = self.propagate(edge_index, x=x, edge_attr=updated_ef)
         return updated_nf, updated_ef
 
     def edge_update(self, x, edge_index, edge_attr):
