@@ -3,7 +3,7 @@ from torch_geometric.data import Data
 
 
 def generate_random_graph(
-    num_node: int, p_edges: float = 0.1, node_feat_dim: int = 5, edge_feat_dim: int = 5
+    num_node: int, p_edges: float = 0.25, node_feat_dim: int = 5, edge_feat_dim: int = 5
 ):
     x = torch.randn(size=(num_node, node_feat_dim))
     # assume directional and potentially self-loop
